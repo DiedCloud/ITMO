@@ -1,0 +1,9 @@
+rm -rdf build dist
+mkdir -p build dist
+
+javac -cp "src:Pokemon.jar" -d build ./src/**.java
+cp manifest.mf build/
+cp Pokemon.jar dist/
+
+cd build
+jar -c -m manifest.mf -f ../dist/battle.jar ./** 
