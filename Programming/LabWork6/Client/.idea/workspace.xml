@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Client:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab08066b-46d6-43f0-99b6-f5449966ee64" name="Changes" comment="7">
+      <change afterPath="$PROJECT_DIR$/../../../Английский/.~lock.Качанов Даниил Эссе.odt#" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Английский/Kachanov Daniil P3106 Bar Chart.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Английский/Kachanov Daniil P3106.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Английский/Kachanov Daniil Travel Blog 6D.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Английский/Traveling in Crimea.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Английский/Без имени 1.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Английский/Без имени 2.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Английский/Без имени 3.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Английский/Безымянный.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Английский/Качанов Даниил  .odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Английский/Качанов Даниил P3106.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Английский/Качанов Даниил Эссе.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Английский/Качанов Даниил.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БД/Лабораторная 1.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БД/Лабораторная 2.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БД/Лабораторная 3.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БД/Лабораторная 4.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БЖД/_Исследование_качества_своего_сна_2023 (1).docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БЖД/~$сследование_качества_своего_сна_2023 (1).docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БЖД/~$чанов_Даниил_Безопасность в путешествиях.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БЖД/Качанов Даниил P3106.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БЖД/Качанов_Даниил Здоровое питание P3106.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БЖД/Качанов_Даниил_Безопасность в путешествиях P3106 367278.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БЖД/Лабораторная_работа__1_Пожар_2023.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БЖД/Шаблон_лабораторной_работы_Выявление_небезопасных_финансовых_операций_2023.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../БЖД/Шаблон_лабораторной_работы_Формирование_личного_бюджета_2023 (1).docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 1/Качанов_Даниил_Лабораторная_1.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 2/Качанов_Даниил_Лабораторная_2.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 3/ex1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 3/ex2_correct.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 3/ex3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 3/Качанов_Даниил_Лабораторная_3.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/.idea/Лаба 4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/convertToJSON.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/ererr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/experimentWithExpressions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/getPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/htmlCodeofShedule.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/joking.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/madIdea.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/parseWithLibrary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/parsedJson.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/parsedJsonRegularExpression.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/parserJson.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/parserReWithChecking.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/task_1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/task_1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/toJSON.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/trueParseWithRegExp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/trueParser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/trueParserJson" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/Качанов_Даниил_Лабораторная_4.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/регулярки.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 5/Лабораторная 5.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 6/main.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 6/result.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 6/страница.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/аннотации/Аннотации лекция 3.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/аннотации/Аннотации лекция 4.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/аннотации/Аннотация лекция 1.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/аннотации/Аннотация лекция 2.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/аннотации/Шаблон_аннотации_2022/~$блон аннотации (MS Office).doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/аннотации/Шаблон_аннотации_2022/Аннотация 6.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/аннотации/Шаблон_аннотации_2022/Аннотация 7.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/аннотации/Шаблон_аннотации_2022/Аннотация к пятой лекции 5.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/аннотации/Шаблон_аннотации_2022/Шаблон аннотации (MS Office).doc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Информатика/аннотации/Шаблон_аннотации_2022/Шаблон аннтоации (LibreOffice).odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../История/Горный университет.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../История/Дом Пашкова.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../История/Качанов Д.В. P3106 2.2 Лента Времени.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../История/Качанов Даниил 2.2 P3106.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../История/Качанов Даниил P3106 2.2 Приложение.odt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../История/Качанов Даниил ИЗРК 2.2 2022 «Классицизм в СПб».docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../История/Качанов Даниил Приложение Лента времени.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../История/Лента Времени Качанов Д.В. 2.2 P3106.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../История/Приложения 2.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../История/Смольный институт.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../История/история.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ОПД/P3106 Качанов Даниил Владимирович ЛР5 Допуск.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ОПД/P3106 Качанов_Даниил_Владимирович ЛР3 Отчёт.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ОПД/P3106 Качанов_Даниил_Владимирович ЛР4 Отчет.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ОПД/P3106 Качанов_Даниил_Владимирович ЛР5 Отчет.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ОПД/bcomp-ng.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ОПД/decoder.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ОПД/Методические указания к выполнению лабораторных работ и рубежного контроля БЭВМ 2019 bcomp-ng (1).pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Информатика/Лаба 4/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Информатика/Лаба 4/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Информатика/Лаба 4/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../../.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2PWfSQy0hUFkVzgIprVYMD2Mobh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fixing&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alisa/IdeaProjects/ITMO/Programming/LabWork6/MusicCommon&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="modules" />
+      <recent name="managers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alisa\IdeaProjects\ITMO\Programming\LabWork6\Client\src" />
+      <recent name="F:\Рабочий стол\ITMO\Programming\LabWork6\Client\lib" />
+      <recent name="F:\Рабочий стол\ITMO\Lab5Client\lib" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <envs>
+        <env name="PORT" value="2672" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab08066b-46d6-43f0-99b6-f5449966ee64" name="Changes" comment="" />
+      <created>1683577758208</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683577758208</updated>
+      <workItem from="1683577759855" duration="726000" />
+      <workItem from="1683646384824" duration="1620000" />
+      <workItem from="1683655066776" duration="9536000" />
+      <workItem from="1683725207934" duration="7149000" />
+      <workItem from="1683904749878" duration="10523000" />
+      <workItem from="1683921245990" duration="978000" />
+      <workItem from="1683923241107" duration="1037000" />
+      <workItem from="1683967395676" duration="805000" />
+      <workItem from="1683968253978" duration="1490000" />
+      <workItem from="1683969765237" duration="2035000" />
+      <workItem from="1683972625726" duration="9463000" />
+      <workItem from="1684521001473" duration="3041000" />
+      <workItem from="1684601794546" duration="2153000" />
+      <workItem from="1684606354016" duration="2252000" />
+      <workItem from="1684608630201" duration="2602000" />
+      <workItem from="1684611761661" duration="870000" />
+      <workItem from="1684612644162" duration="85000" />
+      <workItem from="1684612737661" duration="729000" />
+      <workItem from="1684613669106" duration="779000" />
+      <workItem from="1684615330353" duration="3747000" />
+      <workItem from="1684677252055" duration="2764000" />
+      <workItem from="1684753727882" duration="1169000" />
+      <workItem from="1684755883667" duration="2746000" />
+      <workItem from="1684771014375" duration="4232000" />
+      <workItem from="1684941492949" duration="1762000" />
+      <workItem from="1684943275051" duration="5061000" />
+      <workItem from="1685019669627" duration="866000" />
+      <workItem from="1685024579171" duration="10546000" />
+      <workItem from="1685038184065" duration="881000" />
+      <workItem from="1685039091971" duration="3162000" />
+      <workItem from="1685047891181" duration="147000" />
+      <workItem from="1685048052340" duration="149000" />
+      <workItem from="1685048369581" duration="300000" />
+      <workItem from="1685408194501" duration="8285000" />
+      <workItem from="1685446026398" duration="1290000" />
+      <workItem from="1685462409953" duration="1392000" />
+      <workItem from="1685468435506" duration="1244000" />
+      <workItem from="1685540865912" duration="3746000" />
+      <workItem from="1685635886035" duration="18000" />
+      <workItem from="1685724762370" duration="405000" />
+      <workItem from="1686250188448" duration="30580000" />
+      <workItem from="1686395130292" duration="12267000" />
+      <workItem from="1686512857298" duration="3177000" />
+      <workItem from="1686555305959" duration="2056000" />
+      <workItem from="1691349838349" duration="261000" />
+      <workItem from="1691350184489" duration="14022000" />
+      <workItem from="1691818608948" duration="1429000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="7" />
+    <option name="LAST_COMMIT_MESSAGE" value="7" />
+  </component>
+</project>
