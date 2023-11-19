@@ -42,10 +42,33 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $x = $_GET["X"];
     $y = $_GET["Y"];
 
-    if (check_x($x) and check_y($y) and check_r($r)) {
+
+    if (preg_match("/\.[0-9]{15}0*[1-9]/", $r)){
+        $result .= " Too much symbols after the dot in R,";
+    }
+    else if (!check_x($r)){
+        $result .= " Bad R,";
+    }
+        
+    if (preg_match("/\.[0-9]{15}0*[1-9]/", $x)){
+        $result .= " Too much symbols after the dot in X,";
+    }
+    else if (!check_x($x)){
+        $result .= " Bad X,";
+    }
+        
+    if (preg_match("/\.[0-9]{15}0*[1-9]/", $y)){
+        $result .= " Too much symbols after the dot in Y,";
+    }
+    else if (!check_x($y)){
+        $result .= " Bad Y,";
+    }
+
+    if ($result === "" and check_x($x) and check_y($y) and check_r($r)) {
         $result = check_hit($r, $x, $y);
     } else {
-        $result = "Wrong data";
+        $result = "Wrong data: " . $result; 
+
         http_response_code(400);
     }
 
