@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/plane.css">
+    <title>Web Lab</title>
+</head>
+<body>
+    <header id="title">
+        <h3>Frolov Kirill Dmitrievich, P3206, var1629</h3>
+    </header>
+    <main>
+        <table class="main-table"><!--colspan-->
+            <thead>
+                <tr>
+                    <th class="table-cell"></th>
+                    <th class="table-cell"></th>
+                    <th class="table-cell"></th>
+                    <th class="table-cell"></th>
+                    <th class="table-cell"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="table-cell"></td>
+                    <td class="table-cell" colspan="2" rowspan="2">
+                        <table class="stat-table">
+                            <thead>
+                                <tr>
+                                    <th class="stat-table table-cell" scope="col">R</th>
+                                    <th class="stat-table table-cell" scope="col">X</th>
+                                    <th class="stat-table table-cell" scope="col">Y</th>
+                                    <th class="stat-table table-cell" scope="col">Result</th>
+                                    <th class="stat-table table-cell" scope="col">time</th>
+                                    <th class="stat-table table-cell" scope="col">Execution time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="stat-table-body">
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="table-cell">
+                        <div class="plane">
+                            <div id="q_2"></div>
+                            <div id="q_3"></div>
+                            <div id="q_4"></div>
+                            <div class="x-axis"></div>
+                            <div class="y-axis"></div>
+                            <div class="arrow x-arrow"></div>
+                            <div class="arrow y-arrow"></div>
+                            <script src="./js/plane-ticks.js"></script>
+                        </div>
+                        <br/>
+
+                        <form action="actions/point.php" method="GET">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="R">R</label>
+                                            <br/>
+                                            <input type="text" placeholder="(1; 4)" name="R" id="r-field"/>
+                                            <br/>
+                                        </td>
+                                        <td>
+                                            <p id="error-p"></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="X">X</label>
+                                            <br/>
+                                            <input type="text" placeholder="(-5; 5)" name="X" id="x-field"/>
+                                            <br/>
+                                        </td>
+                                        <td>
+                                            <label for="Y">Y</label>
+                                            <br/>
+                                            <input type="text" placeholder="(-5; 5)" name="Y" id="y-field"/>
+                                            <br/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <input type="submit" value="Добавить" name="add">
+                        </form>
+                        <script src="./js/validation.js"></script>
+                    </td>
+                    <td class="table-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

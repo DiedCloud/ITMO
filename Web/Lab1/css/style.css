@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    font-family: cursive;
+    background-color: rgb(255, 247, 226);
+    height: 100vh;
+}
+header, footer {
+    margin: 0;
+    background-color: rgb(255, 241, 201);
+    text-align: center;
+}
+main {
+    height: auto;
+}
+#title {
+    color: rgb(53, 68, 61);
+    padding: 1%;
+}
+
+
+.main-table {
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+.table-cell {
+    margin: auto;
+    width: 20%;
+    border: inherit;
+    border-collapse: inherit;
+    vertical-align: top;
+}
+.stat-table {
+    border: solid 2px black;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
+.stat-table .table-cell{
+    background-color: rgb(224, 212, 177);
+}
+.stat-table .table-cell:hover{
+    background-color: rgb(255, 241, 201);
+}
+
+input.invalid {
+    border-color: #900;
+    background-color: #fdd;
+}
+
+#error-p{
+    color: red;
+}
