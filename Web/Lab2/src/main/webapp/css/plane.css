@@ -1,0 +1,120 @@
+.plane {
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.x-axis, .y-axis {
+    background-color: #000;
+    position: absolute;
+}
+
+.y-axis {
+    height: 100%;
+    width: 0.25%;
+    top: 0;
+    left: 50%;
+}
+
+.x-axis {
+    width: 100%;
+    height: 0.25%;
+    top: 50%;
+    left: 0;
+}
+
+.x-tick {
+    width: 0.75%;
+    height: 1.75%;
+    background-color: #000;
+    position: absolute;
+}
+
+.y-tick {
+    width: 1.75%;
+    height: 0.75%;
+    background-color: #000;
+    position: absolute;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    position: absolute;
+    background: transparent;
+}
+
+.x-arrow {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid #000;
+    top: calc(50% - 5px);
+    right: 0%;
+}
+
+.y-arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #000;
+    left: calc(50% - 5px);
+}
+
+#q_1{
+    background-color: rgb(126, 126, 253);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 40%;
+    height: 40%;
+}
+
+#q_2{
+    background-color: rgb(126, 126, 253);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 40%;
+    height: 40%;
+    border-radius: 100% 0 0 0;
+}
+#q_3{
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 10%;
+    border-top-width: 40px;
+    border-top-style: solid;
+    border-top-color: rgb(126, 126, 253);
+    border-right-width: 80px;
+    border-right-style: solid;
+    border-right-color: rgb(126, 126, 253);
+    border-bottom-width: 40px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    border-left-width: 80px;
+    border-left-style: solid;
+    border-left-color: transparent;
+    
+}
+#q_4{
+    background-color: rgb(126, 126, 253);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+}
+
+.point {
+    height: 5px;
+    width: 5px;
+    border-radius: 100%;
+    position: absolute;
+}
+.point-hit{
+    background-color: rgba(146, 217, 50, 0.9);
+}
+.point-miss{
+    background-color: rgba(222, 67, 0, 0.9);
+}
