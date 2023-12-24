@@ -1,0 +1,38 @@
+.clock-page-container{
+    width: 20%;
+    min-width: 140px;
+    margin: auto;
+    align-content: center;
+}
+
+.clock-page-form{
+    margin: auto;
+}
+
+.clock-page-form, .clock-page-form-button{
+    width: 100%;
+}
+
+.clock-page-form-button{
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    padding: 1vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2vh;
+}
+
+.digital-clock{
+    margin: auto;
+}
+
+.analog-clock{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 30px;
+    right: 30px;
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>
+        <meta name="viewport" content="initial-scale=1.0" />
+        <meta http-equiv="Content-Type" content="text/html" />
+        <title>Web Lab 3</title>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <h:outputStylesheet library="css" name="clock.css"/>
+    </h:head>
+
+    <h:body>
+        <header id="title">
+            <h3>Frolov Kirill Dmitrievich, P3206, var1741</h3>
+        </header>
+
+        <section id="clock-container" class="clock-page-container">
+            <h:form id="time-form" styleClass="clock-page-form">
+                <p style="text-align: center; margin: 2vh auto 2vh auto;">
+                    Welcome to lab3! <br/>
+                    Current time: <br/>
+                    <p:clock pattern="dd.MM.yyyy HH:mm:ss"
+                             mode="server"
+                             autoSync="true"
+                             syncInterval="8000"
+                             class="digital-clock"
+                    />
+                </p>
+                <div class="analog-clock">
+                    <p:clock displayMode="analog" mode="server" />
+                </div>
+            </h:form>
+            <h:form id="hidden-form" style="display:none; margin: auto">
+                <h:commandButton id="update-time">
+                    <f:ajax render="time-form:updateable-time" />
+                </h:commandButton>
+            </h:form>
+        </section>
+        <section id="redirect-container" class="clock-page-container">
+            <h:form styleClass="clock-page-form">
+                <h:commandButton id="redirect" styleClass="clock-page-form-button" action="goToLab" value="Go to real lab."/>
+            </h:form>
+        </section>
+
+        <h:outputScript>
+            setInterval(function() {
+                document.getElementById("hiddenForm:update-time").click();
+            }, 8000);
+        </h:outputScript>
+    </h:body>
+
+</html>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+    <h:head>
+        <title>Web Lab 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <h:outputStylesheet library="css" name="plane.css"/>
+    </h:head>
+
+    <h:body>
+        <header id="title">
+            <h3>Frolov Kirill Dmitrievich, P3206, var1741</h3>
+        </header>
+
+        <table class="main-table">
+            <thead>
+            <tr>
+                <th class="table-cell"></th>
+                <th class="table-cell"></th>
+                <th class="table-cell"></th>
+                <th class="table-cell"></th>
+                <th class="table-cell"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="table-cell"></td>
+                <td class="table-cell" colspan="2" rowspan="2">
+                    <h:dataTable id="stat-table"
+                                 styleClass ="stat-table"
+                                 rowClasses = "stat-table, table-cell"
+                                 value="#{resultsControllerBean.results}"
+                                 var="result">
+                        <h:column>
+                            <f:facet name = "header">R</f:facet>
+                            #{result.r}
+                        </h:column>
+                        <h:column>
+                            <f:facet name = "header">X</f:facet>
+                            #{result.x}
+                        </h:column>
+                        <h:column>
+                            <f:facet name = "header">Y</f:facet>
+                            #{result.y}
+                        </h:column>
+                        <h:column>
+                            <f:facet name = "header">Result</f:facet>
+                            #{result.result ? "Hit / Success" : "Miss / Fail"}
+                        </h:column>
+                        <h:column>
+                            <f:facet name = "header">Time executed</f:facet>
+                            #{result.calculatedAt}
+                        </h:column>
+                        <h:column>
+                            <f:facet name = "header">Execution time</f:facet>
+                            #{result.calculationTime}
+                        </h:column>
+                    </h:dataTable>
+                </td>
+                <td class="table-cell">
+                    <div class="plane" id="plane">
+                        <div id="q_1"></div>
+                        <div id="q_2"></div>
+                        <div id="q_3"></div>
+                        <div id="q_4"></div>
+                        <div class="x-axis"></div>
+                        <div class="y-axis"></div>
+                        <div class="arrow x-arrow"></div>
+                        <div class="arrow y-arrow"></div>
+                        <h:outputScript type="text/javascript" library="js" name="plane-ticks.js"/>
+                        <h:outputScript>
+                            function drawPoint(r, x, y, res){
+                                let x_cord = x / r * 160;
+                                let y_cord = y / r * 160;
+                                console.log(r, x, y, x_cord, y_cord, res);
+
+                                let point = document.createElement('div');
+                                point.className = "point " + (res ? "point-hit" : "point-miss");
+
+                                point.style.left = (200 + x_cord).toString() + 'px';
+                                point.style.top = (200 - y_cord).toString() + 'px';
+                                document.querySelector('.plane').appendChild(point);
+                            }
+
+                            <ui:repeat var="res" value="#{resultsControllerBean.results}">
+                                drawPoint('#{res.r}', '#{res.x}', '#{res.y}', #{res.result});
+                            </ui:repeat>
+                        </h:outputScript>
+                    </div>
+                    <h:form id="plain-form">
+                        <h:inputHidden id="hiddenR" value="#{rBean.r}" />
+                        <h:inputHidden id="hiddenX" value="#{xBean.x}" />
+                        <h:inputHidden id="hiddenY" value="#{yBean.y}" />
+                        <p:remoteCommand name="updateBeanValues"
+                                         update="hiddenR hiddenX hiddenY stat-table"
+                                         action="#{resultsControllerBean.addResult(rBean.r, xBean.x, yBean.y)}"/>
+                    </h:form>
+                    <br/>
+
+                    <h:form id="form">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <p:outputLabel for="r-field" value="R"/>
+                                    <h:selectOneMenu id="r-field"
+                                                     value = "#{rBean.r}"
+                                                     validator="#{rBean.validateRBeanValue}">
+                                        <f:selectItem itemValue = "1" itemLabel = "1" />
+                                        <f:selectItem itemValue = "2" itemLabel = "2" />
+                                        <f:selectItem itemValue = "3" itemLabel = "3" />
+                                        <f:selectItem itemValue = "4" itemLabel = "4" />
+                                        <f:selectItem itemValue = "5" itemLabel = "5" />
+                                        <f:validateRequired />
+                                        <f:ajax execute="@this" render="@form" />
+                                    </h:selectOneMenu>
+                                </td>
+                                <td>
+                                    <p id="error-p"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p:outputLabel for="x-field" value="X"/>
+                                    <p:spinner id="x-field"
+                                               value="#{xBean.x}"
+                                               required="true"
+                                               stepFactor="0.5"
+                                               min="-4"
+                                               max="4"
+                                               validator="#{xBean.validateXBeanValue}">
+                                        <f:ajax execute="x-field" render="@form" />
+                                    </p:spinner>
+                                </td>
+                                <td>
+                                    <h:outputLabel for="y-field" value="Y"/>
+                                    <h:inputText id="y-field"
+                                                 styleClass=""
+                                                 value="#{yBean.y}"
+                                                 required="true"
+                                                 requiredMessage="Value X is required"
+                                                 validator="#{yBean.validateYBeanValue}"
+                                                 validatorMessage="The value must be from -3 to 5"
+                                                 a:placeholder="Should be between -3 and 5">
+                                        <f:converter converterId="jakarta.faces.Double"/>
+                                        <f:validateDoubleRange minimum="-3" maximum="5"/>
+                                        <f:ajax execute="y-field" render="@form" />
+                                    </h:inputText>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <h:commandButton id="submit-button" value="Добавить">
+                            <f:ajax execute="@form"
+                                    listener="#{resultsControllerBean.addResult(rBean.r, xBean.x, yBean.y)}"
+                                    render="@form stat-table" />
+                        </h:commandButton>
+                    </h:form>
+
+                    <h:form>
+                        <div id="return-to-clock-container">
+                            <h:commandButton id="return-to-clock"
+                                             value="Return to clock page"
+                                             action="goToClock"/>
+                        </div>
+                    </h:form>
+                </td>
+                <td class="table-cell"></td>
+            </tr>
+            </tbody>
+        </table>
+
+    <h:outputScript type="module" library="js" name="script.js"/>
+    </h:body>
+</html>
