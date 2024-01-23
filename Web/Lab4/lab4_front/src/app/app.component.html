@@ -1,0 +1,15 @@
+<header id="title">
+  <h3>Frolov Kirill Dmitrievich, P3206, var1948</h3>
+  <div
+    *ngIf="userService.user == undefined"
+  >
+    Unknown user
+  </div>
+  <div
+    *ngIf="userService.user != undefined"
+  >
+    {{userService.user.login}}
+  </div>
+</header>
+
+<router-outlet></router-outlet>

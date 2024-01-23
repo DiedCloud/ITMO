@@ -1,0 +1,9 @@
+h3{
+  margin: 0.5vh auto;
+}
+.digital-clock{
+  background-color: #dffac7;
+  border: aliceblue;
+  border-radius: 7px;
+  padding: 1.5vh;
+}

@@ -1,0 +1,91 @@
+input{
+  height: 4vh;
+  outline: 0;
+  border: 0;
+  display: block;
+  margin: 0;
+}
+.form-cell>input{
+  width: 100%;
+}
+#submit_button{
+  margin: 0 auto;
+  font-size: 1.5vh;
+  width: 45%;
+  max-width: 120px;
+}
+
+section {
+  margin: 2vh auto;
+  align-content: center;
+}
+
+.buttons-container{
+  align-content: center;
+  align-items: center;
+  display: flex;
+}
+button {
+  width: 45%;
+  max-width: 120px;
+  font-size: 1.5vh;
+  display: block;
+  height: 4vh;
+  outline: 0;
+  border: 0;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 813px) {
+  main{
+    width: 90%;
+    margin: auto;
+  }
+  .form-cell{
+    width: 30%;
+    display: block;
+    float: left;
+    margin: 1%;
+  }
+  #plane-container{
+    margin: 2vh auto;
+  }
+}
+
+@media only screen and (min-width: 814px) and (max-width: 1183px) {
+  main{
+    width: 90%;
+    margin: auto;
+  }
+  #plane-form-container{
+    display: flex;
+    margin: 2vh auto;
+  }
+  #plane-container{
+    display: block;
+    float: left;
+    margin: auto;
+  }
+  #form-container{
+    display: block;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1184px){
+  main{
+    width: 80%;
+    margin: auto;
+  }
+  section {
+    width: 50%;
+    display: block;
+    float: left;
+  }
+  .form-cell{
+    width: 30%;
+    display: block;
+    float: left;
+    margin: 1%;
+  }
+}

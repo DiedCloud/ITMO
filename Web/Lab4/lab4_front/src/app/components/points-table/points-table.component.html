@@ -1,0 +1,24 @@
+<table class="stat-table">
+  <thead>
+    <tr>
+      <th class="stat-table table-cell" scope="col">R</th>
+      <th class="stat-table table-cell" scope="col">X</th>
+      <th class="stat-table table-cell" scope="col">Y</th>
+      <th class="stat-table table-cell" scope="col">Result</th>
+      <th class="stat-table table-cell" scope="col">Time executed</th>
+      <th class="stat-table table-cell" scope="col">Execution time</th>
+    </tr>
+  </thead>
+  <tbody id="stat-table-body">
+  <tr
+    *ngFor="let point of pointsService.points"
+  >
+    <td class="stat-table table-cell">{{point.r.toFixed(2)}}</td>
+    <td class="stat-table table-cell">{{point.x.toFixed(2)}}</td>
+    <td class="stat-table table-cell">{{point.y.toFixed(2)}}</td>
+    <td class="stat-table table-cell">{{point.result ? '+' : '-'}}</td>
+    <td class="stat-table table-cell">{{point.calculatedAt}}</td>
+    <td class="stat-table table-cell">{{point.calculationTime}}</td>
+  </tr>
+  </tbody>
+</table>

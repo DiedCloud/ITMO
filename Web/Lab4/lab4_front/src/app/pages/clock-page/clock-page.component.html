@@ -1,0 +1,34 @@
+<div
+  class = "hello-form-container"
+  *ngIf="userService.user == null"
+>
+  <app-clock></app-clock>
+  <p class="username">Unknown user</p>
+
+  <form [formGroup]="formLogin" (ngSubmit)="login()">
+    <input type="text" class="" placeholder="Login" formControlName="login">
+    <input type="text" class="" placeholder="Password" formControlName="password">
+    <button type="submit" class="">login</button>
+  </form>
+
+  <form [formGroup]="formRegistration" (ngSubmit)="registration()">
+    <input type="text" class="" placeholder="Login" formControlName="login">
+    <input type="text" class="" placeholder="Password" formControlName="password1">
+    <input type="text" class="" placeholder="Repeat password" formControlName="password2">
+
+    <p class="" *ngIf="RegPassword1.errors?.minlength && RegPassword1.touched"
+    >Please fill password 1 field width min length (6). <br/> Now {{ RegPassword1.value.length }}</p>
+    <p class="" *ngIf="RegPassword2.errors?.minlength && RegPassword2.touched"
+    >Please fill password 2 field width min length (6). <br/> Now {{ RegPassword2.value.length }}</p>
+
+    <button type="submit" class="">register</button>
+  </form>
+
+</div>
+<div
+  class = "hello-form-container"
+  *ngIf="userService.user != null"
+>
+  <app-clock></app-clock>
+  <p class="username">Hello, {{userService.user.login}}!</p>
+</div>

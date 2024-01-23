@@ -1,0 +1,7 @@
+<div class="spinner-default">
+  <input type="text" [(ngModel)]="value" (input)="onInput($event)" appNumericInputDirective [name]="name" [id]="id">
+  <div id="buttons">
+    <button type="button" id="plus" (click)="plus()">+</button>
+    <button type="button" id="minus" (click)="minus()">-</button>
+  </div>
+</div>

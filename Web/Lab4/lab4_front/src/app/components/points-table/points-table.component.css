@@ -1,0 +1,22 @@
+.table-cell {
+  margin: auto;
+  width: 20%;
+  border: inherit;
+  border-collapse: inherit;
+  vertical-align: top;
+}
+
+.stat-table {
+  border: solid 2px black;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: center;
+}
+
+.stat-table .table-cell {
+  background-color: rgb(224, 212, 177);
+}
+
+.stat-table .table-cell:hover {
+  background-color: rgb(255, 241, 201);
+}

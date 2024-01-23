@@ -1,0 +1,50 @@
+<main>
+  <section id="plane-form-container">
+    <div id="plane-container">
+      <app-plane></app-plane>
+    </div>
+    <div id="form-container">
+      <form [formGroup]="form" (ngSubmit)="sendData()">
+        <div class="form-cell">
+          <label>R</label>
+          <app-spinner
+            formControlName="r"
+            name="r"
+            id="r"
+            [min]="-5"
+            [max]="3"
+            [step]="1"
+          ></app-spinner>
+        </div>
+        <div class="form-cell">
+          <label>X</label>
+          <app-spinner
+            formControlName="x"
+            name="x"
+            id="x"
+            [min]="-3"
+            [max]="5"
+            [step]="1"
+          ></app-spinner>
+        </div>
+        <div class="form-cell">
+          <label for="y">Y</label>
+          <input appNumericInputDirective type="text" placeholder="(-5; 3)" name="y" id="y" formControlName="y" required/>
+        </div>
+        <br/>
+        <input [disabled]="form.invalid" type="submit" value="Добавить" name="add" id="submit_button">
+        <br/>
+        <p class="error" *ngIf="r.invalid && r.touched">Incorrect r. <i>Should be (-5, 3)</i></p>
+        <p class="error" *ngIf="x.invalid && x.touched">Incorrect x. <i>Should be (-3, 5)</i></p>
+        <p class="error" *ngIf="y.invalid && y.touched">Incorrect y. <i>Should be (-5, 3)</i></p>
+      </form>
+      <div class="buttons-container">
+        <button name="clear" id="clear_button" (click)="clearTable()">Очистить</button>
+        <button name="logout" id="logout_button" (click)="logout()">Выйти</button>
+      </div>
+    </div>
+  </section>
+  <section>
+    <app-points-table></app-points-table>
+  </section>
+</main>

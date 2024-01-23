@@ -1,0 +1,11 @@
+<div class="plane" id="plane" (click)="handleClick($event)">
+  <canvas #canvas width="420px" height="420px">
+    Fallback content
+  </canvas>
+  <ng-container *ngFor="let point of pointsService.points">
+    <app-plane-point
+      *ngIf="point.r == radius"
+      [point] = point>
+    </app-plane-point>
+  </ng-container>
+</div>

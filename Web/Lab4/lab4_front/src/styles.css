@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: cursive;
+  background-color: rgb(255, 247, 226);
+  height: 100vh;
+}
+
+header, footer {
+  margin: 0;
+  background-color: rgb(255, 241, 201);
+  text-align: center;
+}
+
+main {
+  height: auto;
+}
+
+#title {
+  color: rgb(53, 68, 61);
+  padding: 1%;
+}
+
+.error {
+  color: red;
+}
