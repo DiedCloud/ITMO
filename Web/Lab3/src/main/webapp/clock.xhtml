@@ -25,12 +25,7 @@
                 <p style="text-align: center; margin: 2vh auto 2vh auto;">
                     Welcome to lab3! <br/>
                     Current time: <br/>
-                    <p:clock pattern="dd.MM.yyyy HH:mm:ss"
-                             mode="server"
-                             autoSync="true"
-                             syncInterval="8000"
-                             class="digital-clock"
-                    />
+                    <h:outputText id="updateable-time" value="#{timeBean.nowTime}" />
                 </p>
                 <div class="analog-clock">
                     <p:clock displayMode="analog" mode="server" />
@@ -50,8 +45,8 @@
 
         <h:outputScript>
             setInterval(function() {
-                document.getElementById("hiddenForm:update-time").click();
-            }, 8000);
+                document.getElementById("hidden-form:update-time").click();
+            }, 10000);
         </h:outputScript>
     </h:body>
 

@@ -151,7 +151,6 @@
                                 <td>
                                     <h:outputLabel for="y-field" value="Y"/>
                                     <h:inputText id="y-field"
-                                                 styleClass=""
                                                  value="#{yBean.y}"
                                                  required="true"
                                                  requiredMessage="Value X is required"
@@ -160,8 +159,9 @@
                                                  a:placeholder="Should be between -3 and 5">
                                         <f:converter converterId="jakarta.faces.Double"/>
                                         <f:validateDoubleRange minimum="-3" maximum="5"/>
-                                        <f:ajax execute="y-field" render="@form" />
+                                        <f:ajax execute="y-field" event="blur" render="@form" />
                                     </h:inputText>
+                                    <h:message for="y-field"/>
                                 </td>
                             </tr>
                             </tbody>
