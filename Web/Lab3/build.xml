@@ -1,0 +1,144 @@
+<project name="WebProgrammingLab3" default="build" basedir=".">
+
+    <property file="build.properties" />
+
+    <path id="classpath.lib">
+        <fileset dir="${lib.dir}" includes="**/*.jar" />
+    </path>
+
+    <path id="classpath.test">
+        <fileset dir="${lib.dir}" includes="**/*.jar" />
+        <pathelement location="${classes.dir}"/>
+    </path>
+
+
+    <target name="compile">
+        <mkdir dir="${classes.dir}" />
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false" >
+            <classpath refid="classpath.lib" />
+        </javac>
+    </target>
+
+
+    <target name="build" depends="compile">
+        <mkdir dir="${jar.dir}" />
+        <jar destfile="${jar.dir}/${ant.project.name}-${project.version}.jar" basedir="${classes.dir}" compress="false" index="true">
+            <fileset dir="${classes.dir}"/>
+            <manifest>
+                <attribute name="Manifest-Version" value="1.0"/>
+                <attribute name="Main-Class" value="${main.class}" />
+                <attribute name="Implementation-Version" value="${project.version}" />
+            </manifest>
+        </jar>
+    </target>
+
+
+    <target name="build-web" depends="build">
+        <copy todir="${build.web.dir}/">
+            <fileset dir="${src.dir}/main/webapp"/>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/lib" flatten="true">
+            <fileset dir="${lib.dir}" includes="**/*.jar"/>
+        </copy>
+        <copy todir="${build.web.dir}/WEB-INF/classes">
+            <fileset dir="${src.dir}/main/resources"/>
+            <fileset dir="${classes.dir}"/>
+        </copy>
+        <war destfile="${build.dir}/${ant.project.name}.war" webxml="${build.web.dir}/WEB-INF/web.xml">
+            <fileset dir="${build.web.dir}"/>
+            <manifest>
+                <attribute name="Manifest-Version" value="1.0"/>
+                <attribute name="Main-Class" value="NoClass"/>
+                <attribute name="Implementation-Version" value="${project.version}" />
+            </manifest>
+        </war>
+    </target>
+
+
+    <target name="clean">
+        <delete dir="${build.dir}" />
+    </target>
+
+
+    <target name="test" depends="build">
+        <mkdir dir="${junit.report.dir}" />
+        <mkdir dir="${test.classes.dir}" />
+
+        <javac destdir="${test.classes.dir}" srcdir="${test.dir}" includeantruntime="false" encoding="utf-8">
+            <classpath refid="classpath.test"/>
+        </javac>
+
+        <junit fork="true" printsummary="on" failureproperty="checker" haltonfailure="true" haltonerror="true">
+            <classpath>
+                <path refid="classpath.test"/>
+                <pathelement location="${test.classes.dir}"/>
+            </classpath>
+            <batchtest fork="yes" todir="${junit.report.dir}">
+                <formatter type="xml"/>
+                <fileset dir="${src.dir}/test/java" includes="**/*Test*.java"/>
+            </batchtest>
+        </junit>
+        <echo message="Test completed"/>
+    </target>
+
+
+    <target name="doc">
+        <delete dir="doc"/>
+        <mkdir dir="doc"/>
+
+        <mkdir dir="tmp/"/>
+
+        <checksum algorithm="SHA1" todir="tmp/" totalproperty="sha1">
+            <fileset dir="${src.dir}"/>
+        </checksum>
+
+        <checksum algorithm="MD5" todir="tmp/" totalproperty="md5">
+            <fileset dir="${src.dir}"/>
+        </checksum>
+
+
+	 <javadoc sourcepath="${src.dir}" destdir="tmp/doc">
+            <classpath refid="classpath.lib" />
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </javadoc>
+
+
+        <jar destfile="doc/javadoc.jar" basedir="doc">
+	    <fileset dir="tmp/doc"/>
+            <manifest>
+                <attribute name="SHA1" value="${sha1}"/>
+                <attribute name="MD5" value="${md5}"/>
+            </manifest>
+        </jar>
+
+        <delete dir="tmp/"/>
+    </target>
+
+
+    <target name="report" depends="test">
+        <tstamp>
+            <format property="timestamp" pattern="MM dd yyyy hh:mm aa"/>
+        </tstamp>
+        <mkdir dir="${svn.dir}/${timestamp}"/>
+
+        <copy todir="${svn.dir}">
+            <fileset dir="${junit.report.dir}">
+                <include name="*.xml"/>
+            </fileset>
+        </copy>
+
+        <exec executable="svn" dir="${svn.dir}">
+            <arg line="add &quot;${svn.dir}/${timestamp}&quot;"/>
+        </exec>
+
+        <exec executable="svn" dir="${svn.dir}">
+            <arg line="commit -m &quot;Generate test report&quot;"/>
+        </exec>
+        <exec executable="svn" dir="${svn.dir}">
+            <arg line="update"/>
+        </exec>
+    </target>
+</project>
+
