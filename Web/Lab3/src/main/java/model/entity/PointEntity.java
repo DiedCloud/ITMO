@@ -6,6 +6,9 @@ import lombok.*;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
+/**
+ * Класса-сущность, позволяющий связать объект результата (точки) в программе и в базе данных
+ */
 @Entity
 @Table(name = "points", schema = "public") //, schema = "s367590"
 @Data

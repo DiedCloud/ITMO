@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
- * Managed bean for handling X coordinate value in JSF application.
- * Provides functionality to get and set X value, and to validate it.
+ * Managed bean for handling Y coordinate value in JSF application.
+ * Provides functionality to get and set Y value, and to validate it.
  */
 @Data
 @NoArgsConstructor

@@ -39,15 +39,29 @@ public class ResultsControllerBean implements Serializable {
         log.info("Results initialized with {} entries.", results.size());
     }
 
+    /**
+     * Предоставляет возможность получить лист с результатами (точками)
+     * @return лист точек
+     */
     @Named(value = "resultList")
     public ArrayList<PointEntity> getResults() {
         return results;
     }
 
+    /**
+     * Предоставляет возможность задать лист с результатами (точками)
+     * @param results лист точек
+     */
     public void setResults(ArrayList<PointEntity> results) {
         this.results = results;
     }
 
+    /**
+     * Обрабатывает новую точку и добавляет ее в коллекцию
+     * @param r текущий радиус области
+     * @param x абсцисса
+     * @param y ордината
+     */
     public void addResult(Double r, Double x, Double y) {
         PointEntity entity = new PointEntity();
 
