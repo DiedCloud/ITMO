@@ -25,8 +25,7 @@ public class AreaChecker {
         }
         // check 3rd square -- circle
         if (x <= 0 && y <= 0) {
-            if (Math.abs(Math.pow(x, 2) + Math.pow(y, 2) - Math.pow(r, 2)) <= 0.000_001)
-                return true;
+            return Math.pow(x, 2) + Math.pow(y, 2) - Math.pow(r, 2) <= 0.000_001;
         }
         // check 4th square -- always false
         // also if all checks above fails...
