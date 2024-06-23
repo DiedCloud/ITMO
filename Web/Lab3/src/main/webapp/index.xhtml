@@ -102,7 +102,7 @@
                         <h:inputHidden id="hiddenX" value="#{xBean.x}" />
                         <h:inputHidden id="hiddenY" value="#{yBean.y}" />
                         <p:remoteCommand name="updateBeanValues"
-                                         update="hiddenR hiddenX hiddenY stat-table"
+                                         update="hiddenR hiddenX hiddenY stat-table count-bean-result mean-distance-bean-result"
                                          action="#{resultsControllerBean.addResult(rBean.r, xBean.x, yBean.y)}"/>
                     </h:form>
                     <br/>
@@ -169,7 +169,7 @@
                         <h:commandButton id="submit-button" value="Добавить">
                             <f:ajax execute="@form"
                                     listener="#{resultsControllerBean.addResult(rBean.r, xBean.x, yBean.y)}"
-                                    render="@form stat-table" />
+                                    render="@form stat-table count-bean-result mean-distance-bean-result" />
                         </h:commandButton>
                     </h:form>
 
@@ -180,6 +180,9 @@
                                              action="goToClock"/>
                         </div>
                     </h:form>
+
+                    <h:outputText id="count-bean-result" value="Points count: #{countBean.resultsHitCount} / #{countBean.resultsCount}"/>
+                    <h:outputText id="mean-distance-bean-result" value="Mean distance: #{meanDistanceBean.resultDistance}"/>
                 </td>
                 <td class="table-cell"></td>
             </tr>

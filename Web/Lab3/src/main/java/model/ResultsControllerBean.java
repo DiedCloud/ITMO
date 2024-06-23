@@ -3,6 +3,8 @@ package model;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
+import management.CountBean;
+import management.MeanDistanceBean;
 import model.db.DAOFactory;
 import model.entity.PointEntity;
 import jakarta.annotation.PostConstruct;
@@ -29,6 +31,10 @@ public class ResultsControllerBean implements Serializable {
     private XBean xBean;
     @Inject
     private YBean yBean;
+    @Inject
+    private MeanDistanceBean mdb;
+    @Inject
+    private CountBean cb;
 
     private ArrayList<PointEntity> results = new ArrayList<>();
 
@@ -37,6 +43,11 @@ public class ResultsControllerBean implements Serializable {
         var resultsEntities = DAOFactory.getInstance().getResultDAO().getAllResults();
         results = new ArrayList<PointEntity>(resultsEntities);
         log.info("Results initialized with {} entries.", results.size());
+        cb.setResultsCount(results.size());
+        cb.setResultsHitCount(results.stream().filter(PointEntity::isResult).toList().size());
+        mdb.calcDistance(results.stream().map(
+                (PointEntity res) -> new double[] {res.getX(), res.getY(), res.getR()}
+        ).toList());
     }
 
     /**
@@ -79,6 +90,12 @@ public class ResultsControllerBean implements Serializable {
         results.add(entity);
         // add to db
         DAOFactory.getInstance().getResultDAO().addNewResult(entity);
+
+        mdb.calcDistance(results.stream().map(
+                (PointEntity res) -> new double[] {res.getX(), res.getY(), res.getR()}
+        ).toList());
+        cb.registerNewPoint(result);
+
         log.info("Added new result to the db: X={}", x);
     }
 

@@ -29,4 +29,8 @@
         <param-name>javax.faces.RESOURCE_EXCLUDES</param-name>
         <param-value>/javax.faces.resource/*</param-value>
     </context-param>
+
+    <listener>
+        <listener-class>management.Agent</listener-class>
+    </listener>
 </web-app>
