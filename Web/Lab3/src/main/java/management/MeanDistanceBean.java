@@ -1,8 +1,5 @@
 package management;
 
-import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.inject.Named;
-
 import java.util.List;
 
 /**
@@ -24,7 +21,7 @@ public class MeanDistanceBean implements MeanDistanceMBean {
             double y2 = points.get(i + 1)[1] / points.get(i + 1)[2];
             res += Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         }
-        distance = res / (points.size() - 1);
+        this.setDistance(res / (points.size() - 1));
     }
 
     @Override

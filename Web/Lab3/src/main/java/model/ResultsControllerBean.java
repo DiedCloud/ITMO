@@ -42,11 +42,14 @@ public class ResultsControllerBean implements Serializable, ServletContextListen
 
     private ArrayList<PointEntity> results = new ArrayList<>();
 
-    @PostConstruct
-    public void contextInitialized(ServletContextEvent sce) {
+    public ResultsControllerBean(){
+        super();
         mdb = new MeanDistanceBean();
         cb = new CountBean();
+    }
 
+    @PostConstruct
+    public void init(){
         var resultsEntities = DAOFactory.getInstance().getResultDAO().getAllResults();
         results = new ArrayList<PointEntity>(resultsEntities);
         log.info("Results initialized with {} entries.", results.size());
@@ -55,26 +58,52 @@ public class ResultsControllerBean implements Serializable, ServletContextListen
         mdb.calcDistance(results.stream().map(
                 (PointEntity res) -> new double[] {res.getX(), res.getY(), res.getR()}
         ).toList());
+    }
 
+    @PostConstruct
+    public void contextInitialized(ServletContextEvent sce) {
+        registerAgain();
+    }
 
+    public void registerAgain(){
         MBeanServer mbs = ManagementFactory.getPlatformMBeanServer();
 
         ObjectName mBean1;
         try {
-            mBean1 = new ObjectName("Agent:name=MeanDistanceAgent");
-            if (!mbs.isRegistered(mBean1)) {
-                mbs.registerMBean(mdb, mBean1);
-            }
+            mBean1 = new ObjectName("Agent:name=MeanDistanceMBean");
+        } catch(Exception e) {
+            e.printStackTrace();
+            return;
+        }
+
+        try {
+            mbs.unregisterMBean(mBean1);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            mbs.registerMBean(mdb, mBean1);
         } catch(Exception e) {
             e.printStackTrace();
         }
 
         ObjectName mBean2;
         try {
-            mBean2 = new ObjectName("Agent:name=CountAgent");
-            if (!mbs.isRegistered(mBean2)) {
-                mbs.registerMBean(cb, mBean2);
-            }
+            mBean2 = new ObjectName("Agent:name=CountMBean");
+        } catch(Exception e) {
+            e.printStackTrace();
+            return;
+        }
+
+        try {
+            mbs.unregisterMBean(mBean2);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            mbs.registerMBean(cb, mBean2);
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -125,6 +154,7 @@ public class ResultsControllerBean implements Serializable, ServletContextListen
                 (PointEntity res) -> new double[] {res.getX(), res.getY(), res.getR()}
         ).toList());
         cb.registerNewPoint(result);
+        this.registerAgain();
 
         log.info("Added new result to the db: X={}", x);
     }

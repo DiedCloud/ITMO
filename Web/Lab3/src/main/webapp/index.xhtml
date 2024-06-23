@@ -181,8 +181,9 @@
                         </div>
                     </h:form>
 
-                    <h:outputText id="count-bean-result" value="Points count: #{countBean.resultsHitCount} / #{countBean.resultsCount}"/>
-                    <h:outputText id="mean-distance-bean-result" value="Mean distance: #{meanDistanceBean.resultDistance}"/>
+                    <h:outputText id="count-bean-result" value="Points count: #{resultsControllerBean.cb.resultsHitCount} / #{resultsControllerBean.cb.resultsCount}"/>
+                    <br/>
+                    <h:outputText id="mean-distance-bean-result" value="Mean distance: #{resultsControllerBean.mdb.distance}"/>
                 </td>
                 <td class="table-cell"></td>
             </tr>

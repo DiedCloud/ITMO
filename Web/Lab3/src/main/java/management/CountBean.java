@@ -1,7 +1,5 @@
 package management;
 
-import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.inject.Named;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,8 +16,8 @@ public class CountBean implements CountMBean {
 
     @Override
     public void registerNewPoint(boolean hit) {
-        resultsCount++;
+        setResultsCount(resultsCount+1);
         if (hit)
-            resultsHitCount++;
+            setResultsHitCount(resultsHitCount+1);
     }
 }
