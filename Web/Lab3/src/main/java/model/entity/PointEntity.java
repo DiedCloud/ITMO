@@ -42,12 +42,12 @@ public class PointEntity {
     @Setter
     private boolean result;
 
-    @Column(name = "\"calculatedAt\"")
+    @Column(name = "\"calculated_at\"")
     @Getter
     @Setter
     private LocalDateTime calculatedAt = LocalDateTime.now();
 
-    @Column(name = "\"calculationTime\"")
+    @Column(name = "\"calculation_time\"")
     @Getter
     @Setter
     private long calculationTime;
