@@ -8,10 +8,8 @@ import java.util.List;
 /**
  * Managed bean для получения информации о среднем расстоянии между точками
  */
-@Named
-@ApplicationScoped
 public class MeanDistanceBean implements MeanDistanceMBean {
-    private double distance;
+    double distance;
 
     /**
      * Предоставляет возможность задать массив точек, из которого будет считаться показатель

@@ -3,6 +3,8 @@ package model;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 import management.CountBean;
 import management.MeanDistanceBean;
 import model.db.DAOFactory;
@@ -11,7 +13,10 @@ import jakarta.annotation.PostConstruct;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.management.MBeanServer;
+import javax.management.ObjectName;
 import java.io.Serializable;
+import java.lang.management.ManagementFactory;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -24,22 +29,24 @@ import java.util.Objects;
 @Slf4j
 @Named
 @ApplicationScoped
-public class ResultsControllerBean implements Serializable {
+public class ResultsControllerBean implements Serializable, ServletContextListener {
     @Inject
     private RBean rBean;
     @Inject
     private XBean xBean;
     @Inject
     private YBean yBean;
-    @Inject
-    private MeanDistanceBean mdb;
-    @Inject
-    private CountBean cb;
+
+    MeanDistanceBean mdb;
+    CountBean cb;
 
     private ArrayList<PointEntity> results = new ArrayList<>();
 
     @PostConstruct
-    public void init() {
+    public void contextInitialized(ServletContextEvent sce) {
+        mdb = new MeanDistanceBean();
+        cb = new CountBean();
+
         var resultsEntities = DAOFactory.getInstance().getResultDAO().getAllResults();
         results = new ArrayList<PointEntity>(resultsEntities);
         log.info("Results initialized with {} entries.", results.size());
@@ -48,6 +55,29 @@ public class ResultsControllerBean implements Serializable {
         mdb.calcDistance(results.stream().map(
                 (PointEntity res) -> new double[] {res.getX(), res.getY(), res.getR()}
         ).toList());
+
+
+        MBeanServer mbs = ManagementFactory.getPlatformMBeanServer();
+
+        ObjectName mBean1;
+        try {
+            mBean1 = new ObjectName("Agent:name=MeanDistanceAgent");
+            if (!mbs.isRegistered(mBean1)) {
+                mbs.registerMBean(mdb, mBean1);
+            }
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+
+        ObjectName mBean2;
+        try {
+            mBean2 = new ObjectName("Agent:name=CountAgent");
+            if (!mbs.isRegistered(mBean2)) {
+                mbs.registerMBean(cb, mBean2);
+            }
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**

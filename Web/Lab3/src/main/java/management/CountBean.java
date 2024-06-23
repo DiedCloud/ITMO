@@ -8,8 +8,6 @@ import lombok.Setter;
 /**
  * Managed bean для получения информации о количестве точек
  */
-@ApplicationScoped
-@Named
 public class CountBean implements CountMBean {
     @Getter
     @Setter
